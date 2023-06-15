@@ -9,6 +9,7 @@ const AdminPanel = () => {
     return (
         <>
             {!isLoading ? <AdminAutorisation setLoading={setLoading}/> :  <AdminWorkSpace/>}
+            
         </>
     )
 }
