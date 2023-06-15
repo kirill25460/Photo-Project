@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-//import { useState } from 'react'
+import styles from './AdminPanelInput.module.css'
 
 
 const AdminPanelInput = ({ text, type, value, setValue }) => {
@@ -10,7 +10,7 @@ const AdminPanelInput = ({ text, type, value, setValue }) => {
 
   return (
     <>
-      <input placeholder={text} type={type} value={value} onChange={handleChange} />
+      <input className={styles.inputLogin} placeholder={text} type={type} value={value} onChange={handleChange} />
     </>
   )
 }
