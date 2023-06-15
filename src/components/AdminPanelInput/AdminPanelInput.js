@@ -1,27 +1,27 @@
 import PropTypes from 'prop-types'
-//import { useState } from 'react'
+import { useState } from 'react'
 
+const AdminPanelBtn = ({ text, type, className, getAuth}) => {
+    const [login, setLogin] = useState()
+    const [password, setPassword] = useState()
 
-const AdminPanelInput = ({ text, type, value, setValue }) => {
-  const handleChange = (e) => {
-    const { value } = e.target;
-    setValue(value)
-  }
+    const handleAuth = (e) => {
+        const {value} = e.currentTarget;
+        setLogin(value)
+        setPassword(value)
+        getAuth(login, password)
+    }
 
-  return (
-    <>
-      <input placeholder={text} type={type} value={value} onChange={handleChange} />
-    </>
-  )
+    return (
+        <>
+            <input className={className} placeholder={text} type={type} onChange={handleAuth}></input>
+        </>
+    )
 }
 
-AdminPanelInput.propTypes = {
-  text: PropTypes.string,
-  type: PropTypes.string,
-  value: PropTypes.string,
-  getAuth: PropTypes.func
+AdminPanelBtn.propTypes = {
+    text: PropTypes.string,
+    type: PropTypes.string,
 }
 
-
-export default AdminPanelInput;
-
+export default AdminPanelBtn;

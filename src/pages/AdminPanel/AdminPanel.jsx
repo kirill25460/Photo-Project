@@ -1,16 +1,30 @@
-import { useState } from 'react';
-//import styles from './AdminPanel.module.css'
-import AdminAutorisation from 'components/AdminAutorisation/AdminAutorisation';
-import AdminWorkSpace from 'components/AdminWorkSpace/AdminWorkSpace';
+import styles from './AdminPanel.module.css'
+import AdminPanelBtn from 'components/AdminPanelBtn/AdminPanelBtn'
+import AdminPanelInput from 'components/AdminPanelInput/AdminPanelInput'
+import { useState } from 'react'
+
+    const asd = {
+        login: 'Natasha',
+        password:'qweewqqwe'
+    }
 
 const AdminPanel = () => {  
 
-    const [isLoading, setLoading] = useState()
+
+
+    const [auth, setAuth] = useState({});
+
+    const getAuth = (login, password) => {
+        setAuth({ login, password });
+        console.log(auth)
+    }
 
     return (
-        <>
-            {!isLoading ? <AdminAutorisation setLoading={setLoading}/> :  <AdminWorkSpace/>}
-        </>
+        <div className={styles.containerInput}>
+            <AdminPanelInput className={styles.inputLogin} text={'Write your email'} type={'email'} getAuth={getAuth}/>
+            <AdminPanelInput className={styles.inputPassword} text={'Write your password'} type={'password'} getAuth={getAuth}/>
+            <AdminPanelBtn getAuth={getAuth} />
+        </div>
     )
 }
 
