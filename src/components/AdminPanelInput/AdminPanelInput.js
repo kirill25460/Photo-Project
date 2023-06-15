@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import styles from './AdminPanelInput.module.css'
 import { useState } from 'react'
 
 const AdminPanelBtn = ({ text, type, className, getAuth}) => {
