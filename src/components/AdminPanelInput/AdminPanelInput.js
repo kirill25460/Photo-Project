@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import styles from './AdminPanelInput.module.css'
 import { useState } from 'react'
 
-const AdminPanelBtn = ({text, type, getAuth}) => {
+const AdminPanelBtn = ({ text, type, className, getAuth}) => {
     const [login, setLogin] = useState()
     const [password, setPassword] = useState()
 
@@ -15,7 +15,7 @@ const AdminPanelBtn = ({text, type, getAuth}) => {
 
     return (
         <>
-            <input placeholder={text} type={type} onChange={handleAuth}></input>
+            <input className={className} placeholder={text} type={type} onChange={handleAuth}></input>
         </>
     )
 }

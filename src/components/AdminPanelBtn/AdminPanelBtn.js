@@ -6,7 +6,7 @@ const AdminPanelBtn = ({getAuth}) => {
 
     return (
         <>
-            <button onClick={getAuth} type='button'>Submit</button>
+            <button className={styles.formBtn} onClick={getAuth} type='button'>Submit</button>
         </>
     )
 }
