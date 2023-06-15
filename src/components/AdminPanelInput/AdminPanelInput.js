@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import styles from './AdminPanelInput.module.css'
 import { useState } from 'react'
+
 
 const AdminPanelInput = ({ text, type, value, setValue }) => {
   const handleChange = (e) => {
@@ -22,4 +22,6 @@ AdminPanelInput.propTypes = {
   getAuth: PropTypes.func
 }
 
+
 export default AdminPanelInput;
+
