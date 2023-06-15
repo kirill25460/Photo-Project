@@ -13,7 +13,8 @@ const AdminAutorisation = ({setLoading}) => {
     
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
-    const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useState({}); 
+    console.log(auth)
 
     const getAuth = () => {
         setAuth({ login, password });
