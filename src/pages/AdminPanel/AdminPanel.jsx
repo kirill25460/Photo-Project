@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import styles from './AdminPanel.module.css'
 import AdminAutorisation from 'components/AdminAutorisation/AdminAutorisation';
 import AdminWorkSpace from 'components/AdminWorkSpace/AdminWorkSpace';
 
