@@ -1,1 +1,1 @@
-export {default} from './AdminPanelInput';
+export {AdminPanelInput} from './AdminPanelInput';

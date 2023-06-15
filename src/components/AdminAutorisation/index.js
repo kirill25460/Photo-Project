@@ -1,1 +1,1 @@
-export {default} from './AdminAutorisation';
+export {AdminAutorisation} from './AdminAutorisation';

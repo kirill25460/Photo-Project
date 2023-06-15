@@ -1,1 +1,1 @@
-export {default} from './AdminPanelBtn';
+export {AdminPanelBtn} from './AdminPanelBtn';

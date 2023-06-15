@@ -1,1 +1,1 @@
-export { default } from './AdminWorkSpace';
+export { AdminWorkSpace } from './AdminWorkSpace';
