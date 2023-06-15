@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types'
-import styles from './AdminAutorisation.module.css'
+// import styles from './AdminAutorisation.module.css'
 import AdminPanelBtn from 'components/AdminPanelBtn/AdminPanelBtn'
 import AdminPanelInput from 'components/AdminPanelInput/AdminPanelInput'
-import AdminWorkSpace from 'components/AdminWorkSpace/AdminWorkSpace'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const asd = {
     login: 'Natasha',
