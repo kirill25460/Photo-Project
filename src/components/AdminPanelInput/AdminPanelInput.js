@@ -2,27 +2,24 @@ import PropTypes from 'prop-types'
 import styles from './AdminPanelInput.module.css'
 import { useState } from 'react'
 
-const AdminPanelBtn = ({text, type, getAuth}) => {
-    const [login, setLogin] = useState()
-    const [password, setPassword] = useState()
+const AdminPanelInput = ({ text, type, value, setValue }) => {
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setValue(value)
+  }
 
-    const handleAuth = (e) => {
-        const {value} = e.currentTarget;
-        setLogin(value)
-        setPassword(value)
-        getAuth(login, password)
-    }
-
-    return (
-        <>
-            <input placeholder={text} type={type} onChange={handleAuth}></input>
-        </>
-    )
+  return (
+    <>
+      <input placeholder={text} type={type} value={value} onChange={handleChange} />
+    </>
+  )
 }
 
-AdminPanelBtn.propTypes = {
-    text: PropTypes.string,
-    type: PropTypes.string,
+AdminPanelInput.propTypes = {
+  text: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  getAuth: PropTypes.func
 }
 
-export default AdminPanelBtn;
+export default AdminPanelInput;

@@ -1,27 +1,36 @@
 import styles from './AdminPanel.module.css'
 import AdminPanelBtn from 'components/AdminPanelBtn/AdminPanelBtn'
 import AdminPanelInput from 'components/AdminPanelInput/AdminPanelInput'
-import { useState } from 'react'
+import AdminWorkSpace from 'components/AdminWorkSpace/AdminWorkSpace'
+import { useState, useEffect } from 'react'
 
 const AdminPanel = () => {  
 
     const asd = {
         login: 'Natasha',
-        password:'qweewqqwe'
+        password:'natashadmin'
     }
 
+    const [login, setLogin] = useState('');
+    const [password, setPassword] = useState('');
     const [auth, setAuth] = useState({});
+    const [isLoading, setLoading] = useState(true)
 
-    const getAuth = (login, password) => {
+    const getAuth = () => {
         setAuth({ login, password });
-        console.log(auth)
+        setLoading(false)
     }
+
+    useEffect(() => {
+        console.log(auth);
+      }, [auth]);
 
     return (
         <>
-            <AdminPanelInput text={'Write your email'} type={'email'} getAuth={getAuth}/>
-            <AdminPanelInput text={'Write your password'} type={'password'} getAuth={getAuth}/>
-            <AdminPanelBtn getAuth={getAuth} />
+            {!isLoading ? null : <AdminPanelInput text={'Write your email'} type={'email'} value={login || ''} setValue={setLogin}/>}
+            {!isLoading ? null : <AdminPanelInput text={'Write your password'} type={'password'} value={password || ''}  setValue={setPassword}/>}
+            {!isLoading ? null : <AdminPanelBtn getAuth={getAuth} />}
+            { asd.login === auth.login && asd.password === auth.password ? <AdminWorkSpace/> : null }
         </>
     )
 }
