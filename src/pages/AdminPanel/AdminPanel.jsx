@@ -6,8 +6,6 @@ import AdminWorkSpace from 'components/AdminWorkSpace/AdminWorkSpace';
 const AdminPanel = () => {  
     const [isLoading, setLoading] = useState()
 
-
-
     return (
         <>
             {!isLoading ? <AdminAutorisation setLoading={setLoading}/> :  <AdminWorkSpace/>}
