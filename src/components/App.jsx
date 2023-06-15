@@ -1,16 +1,9 @@
+import AdminPanel from "pages/AdminPanel/AdminPanel";
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      Казан їбаш їх блять
+    <div>
+      <AdminPanel/>
     </div>
   );
 };
