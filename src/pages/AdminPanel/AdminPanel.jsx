@@ -19,6 +19,7 @@ const AdminPanel = () => {
 
     return (
         <div className={styles.containerInput}>
+            Ху й
             <AdminPanelInput className={styles.inputLogin} text={'Write your email'} type={'email'} getAuth={getAuth}/>
             <AdminPanelInput className={styles.inputPassword} text={'Write your password'} type={'password'} getAuth={getAuth}/>
             <AdminPanelBtn getAuth={getAuth} />
