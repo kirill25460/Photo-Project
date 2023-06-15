@@ -12,7 +12,7 @@ const AdminPanelBtn = ({getAuth}) => {
 }
 
 AdminPanelBtn.propTypes = {
-    text: PropTypes.string
+  getAuth: PropTypes.func
 }
 
 export default AdminPanelBtn;
