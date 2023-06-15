@@ -4,12 +4,13 @@ import AdminPanelInput from 'components/AdminPanelInput/AdminPanelInput'
 import AdminWorkSpace from 'components/AdminWorkSpace/AdminWorkSpace'
 import { useState, useEffect } from 'react'
 
-const AdminPanel = () => {  
 
-    const asd = {
-        login: 'Natasha',
-        password:'natashadmin'
-    }
+const asd = {
+    login: 'Natasha',
+    password:'natashadmin'
+}
+
+const AdminPanel = () => {  
 
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
