@@ -3,12 +3,14 @@ import AdminPanelBtn from 'components/AdminPanelBtn/AdminPanelBtn'
 import AdminPanelInput from 'components/AdminPanelInput/AdminPanelInput'
 import { useState } from 'react'
 
-const AdminPanel = () => {  
-
     const asd = {
         login: 'Natasha',
         password:'qweewqqwe'
     }
+
+const AdminPanel = () => {  
+
+
 
     const [auth, setAuth] = useState({});
 
