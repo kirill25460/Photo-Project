@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import styles from './AdminAutorisation.module.css'
+// import styles from './AdminAutorisation.module.css'
 import AdminPanelBtn from 'components/AdminPanelBtn/AdminPanelBtn'
 import AdminPanelInput from 'components/AdminPanelInput/AdminPanelInput'
 import { useState } from 'react'
