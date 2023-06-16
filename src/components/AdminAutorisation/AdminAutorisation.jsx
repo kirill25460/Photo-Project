@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types'
 import styles from './AdminAutorisation.module.css'
+import Notiflix from 'notiflix';
 import AdminPanelBtn from 'components/AdminPanelBtn/AdminPanelBtn'
 import AdminPanelInput from 'components/AdminPanelInput/AdminPanelInput'
 import { useState } from 'react'
+
+
 
 const asd = {
     login: 'Natasha',
@@ -18,8 +21,14 @@ const AdminAutorisation = ({setLoading}) => {
 
     const getAuth = () => {
         setAuth({ login, password });
-        setLoading(asd.login === login && asd.password === password);
+        if(asd.login === login && asd.password === password){
+            setLoading(asd.login === login && asd.password === password);
+        }else{
+            Notiflix.Notify.failure('Error!');
+        }
     }
+
+
 
     return (
         <div className={styles.container}>
