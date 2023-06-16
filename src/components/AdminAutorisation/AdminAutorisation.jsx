@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-// import styles from './AdminAutorisation.module.css'
+import styles from './AdminAutorisation.module.css'
 import AdminPanelBtn from 'components/AdminPanelBtn/AdminPanelBtn'
 import AdminPanelInput from 'components/AdminPanelInput/AdminPanelInput'
 import { useState } from 'react'
@@ -22,11 +22,11 @@ const AdminAutorisation = ({setLoading}) => {
     }
 
     return (
-        <>
-            <AdminPanelInput text={'Write your email'} type={'email'} value={login || ''} setValue={setLogin}/>
-            <AdminPanelInput text={'Write your password'} type={'password'} value={password || ''}  setValue={setPassword}/>
-            <AdminPanelBtn getAuth={getAuth} />
-        </>
+        <div className={styles.container}>
+            <AdminPanelInput className={styles.auth__input} text={'Write your email'} type={'email'} value={login || ''} setValue={setLogin}/>
+            <AdminPanelInput className={styles.auth__input} text={'Write your password'} type={'password'} value={password || ''}  setValue={setPassword}/>
+            <AdminPanelBtn className={styles.auth__button} getAuth={getAuth} />
+        </div>
     )
 }
 

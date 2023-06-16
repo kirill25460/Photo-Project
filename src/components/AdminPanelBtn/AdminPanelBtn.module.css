@@ -1,15 +1,17 @@
 .formBtn{
-    margin-top: 20px;
-    padding: 5px 30px;
-    border-radius: 8px;
-    border: 0;
-    background-color: rgba(255, 255, 255, 0);
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F2A0CD;
+    color: white;
     cursor: pointer;
-
-    color: gray;
+    font-size: 18px;
+    text-align: center;
 }
 
 .formBtn:hover{
-    border: 2px solid blue;
-    background-color: red;
+    background-color: #F2A0CD;
+    opacity: 0.8;
 }
