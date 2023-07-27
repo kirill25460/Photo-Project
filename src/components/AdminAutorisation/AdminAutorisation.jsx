@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import styles from './AdminAutorisation.module.css'
 import Notiflix from 'notiflix';
-import AdminPanelBtn from 'components/AdminPanelBtn/AdminPanelBtn'
-import AdminPanelInput from 'components/AdminPanelInput/AdminPanelInput'
+import AdminPanelBtn from 'components/AdminAutorisation/AdminPanelBtn/AdminPanelBtn'
+import AdminPanelInput from 'components/AdminAutorisation/AdminPanelInput/AdminPanelInput'
 import { useState } from 'react'
 
 
@@ -27,8 +27,6 @@ const AdminAutorisation = ({setLoading}) => {
             Notiflix.Notify.failure('Error!');
         }
     }
-
-
 
     return (
         <div className={styles.container}>
